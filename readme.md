@@ -9,3 +9,5 @@ La idea es hacerla moderna y lo más interactiva posible.
         - Los primeros cuatro productos tienen su propia página descriptiva básica, mi plan es hacerla mucho más completa > un carrusel que muestre distintas fotos del producto, una descripción más detallada, botón de "agregar a carrito" funcional y más.
         - El centro "help" (arriba en el header) lleva a que el usuario pueda enviar un ticket con alguna duda que tenga. Mi idea es también agregar la dirección, teléfono, locación con google maps, en otra parte de contacto que va a tener el elemento help.
         - En la página principal podes clickear algunos de los artistas para escuchar su último single.
+
+ewcandela.github.io/index.html
