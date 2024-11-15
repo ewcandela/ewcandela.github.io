@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.product-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.product-img img:hover {
+    border: 3px solid #4897cc;
+}
+
+.product-details {
+    padding-left: 40px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4897cc;
+    margin-bottom: 3rem;
+}
+
+.contents {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-details2 p {
+    color: #555;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.contents_per_version h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.contents_per_version {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+.contents_per_version li {
+    padding: 5px 5px;
+    border: 1px solid black;
+}
+
+.purchase {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.purchase input[type="number"] {
+    width: 50px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.add-to-cart {
+    color: #0c0c0c;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: none;
+}
+
+.add-to-cart:hover {
+    border: 1px solid #4897cc;
+    color: #ebebeb;
+    background-color: #4897cc;
+    transition: ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 15px;
+    }
+
+    .product-img img {
+        width: 100%;
+    }
+
+    .product-details {
+        float: left;
+    }
+
+    .purchase {
+        align-items: center;
+    }
+
+}
