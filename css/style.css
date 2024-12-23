@@ -7,14 +7,14 @@
 body {
     height: 100vh;
     background-color: rgb(245, 245, 245);
+
 }
 
 /* HEADER Y NAVEGACIÓN DE LA MISMA */
 header {
-    padding: 0.05rem;
-    background-color: rgb(12, 12, 12);
-    color: white;
     position: sticky;
+    top: 0;
+    background-color: rgb(12, 12, 12);
     z-index: 10;
 }
 
@@ -28,6 +28,7 @@ header {
 .logo img {
     height: 45px;
     width: 100px;
+    object-fit: contain;
     filter: brightness(0) saturate(100%) invert(39%) sepia(90%) saturate(320%) hue-rotate(160deg) brightness(105%);
     cursor: pointer;
 }
@@ -46,7 +47,7 @@ a {
     font-size: 0.9rem;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
     text-decoration: none;
     transition: 0.2s;
 }
@@ -70,8 +71,192 @@ a:hover {
     height: 24x;
 }
 
+/**/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 500; 
+    display: none;
+}
+
+/* CARRITO */
+.icon-cart span {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    width: 30px;
+    color: #ebebeb;
+}
+
+.cartTab .shoppingtitle {
+    font-weight: 500;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.cartTab {
+    background-color: rgb(12, 12, 12);
+    color: #ebebeb;
+    width: 400px;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0; 
+    border-left: 1px solid #ebebeb;
+    font-family: "Bebas Neue", serif;
+
+    display: grid;
+    grid-template-rows: 62px 1fr 62px;
+    z-index: 1000;
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #ebebeb;
+    font-weight: 300;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 3px;
+    position: center;
+    padding: 30px 20px;
+}
+
+.cartTab .btn button {
+    color: #4897cc;
+    background-color: #ebebeb;
+    border: 1px solid rgba(59, 59, 59, 0.577);
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.cartTab .btn button:hover {
+    color: #ebebeb;
+    border: 1px solid #4897cc;
+    background-color: #4897cc;
+}
+
+.cartTab .listCart{
+    overflow: auto;
+}
+
+.cartTab .listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+.cartTab {
+    transition: 0.5s;
+}
+
+body.activeTabCart .cartTab {
+    right: 0;
+}
+
+/**/
+.cart-item {
+    display: flex;
+    border-bottom: 1px solid #ebebeb;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;  
+    background-color: rgb(12, 12, 12);  
+    box-sizing: border-box;
+}
+
+.cart-item-details {
+    align-items: center;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.cart-item-details h5 {
+    margin: 0;
+    font-size: 12;
+    font-weight: 500;
+    color: #ebebeb; 
+}
+
+.cart-item p {
+    font-size: 14px;
+    padding-top: 7px;
+    position: left;
+    color: #ebebeb;  
+}
+
+.remove-button {
+    padding: 10px;
+    padding-left: 90px;
+}
+
+.remove-item {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.remove-item:hover {
+    background-color: #ff3333;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 15px;
+    border-top: 1px solid;
+    font-size: 18px;
+    font-family: "Bebas Neue", serif;;
+}
+
+.foot h2 {
+    font-size: 18px;
+    margin-top: 3px;
+    padding: 5px 0px;
+}
+
+.foot h3 {
+    font-size: 20px;
+    font-family: "Bebas Neue", serif;;;
+    margin-top: 3px;
+    padding: 5px 0px;
+}
+
+
 /* SLIDER, main page */
-.container {
+.slider-container {
     padding: 0;
 }
 
@@ -156,7 +341,7 @@ a:hover {
     font-size: 0.7rem;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
     text-align: center;
 }
 
@@ -165,7 +350,7 @@ a:hover {
     font-size: 0.7rem;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
     text-align: center;
 }
 
@@ -174,7 +359,7 @@ a:hover {
     font-size: 0.7rem;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
     text-align: center;
 }
 
@@ -188,22 +373,14 @@ a:hover {
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
 }
 
 /* ALBUMNES AGREGADOS RECIENTEMENTE */
 .newalbums {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     gap: 20px;
-    justify-content: center;
-}
-
-.album {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 350px;
 }
 
 .album img {
@@ -225,7 +402,7 @@ a:hover {
     font-size: 15px;
     font-style: bold;
     font-weight: 600;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
 }
 
 .album, p {
@@ -234,6 +411,7 @@ a:hover {
     font-weight: 400;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 /* ARTISTAS QUE AMAMOS */
 .artists-love {
@@ -249,7 +427,7 @@ a:hover {
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
     text-align: center;
 }
 
@@ -286,7 +464,7 @@ a:hover {
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
 }
 
 /* FEATURED ALBUMS */
@@ -314,7 +492,7 @@ div[class^='m_album'] img:hover {
     font-size: 15px;
     font-style: bold;
     font-weight: 600;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
 }
 
 .m_album, p {
@@ -374,7 +552,7 @@ button:hover {
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
     text-align: center;
 }
 
@@ -412,7 +590,7 @@ footer, .footerContainer {
     height: 100px;
     padding: 10px;
     font-size: 12px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    font-family: "Roboto", serif;  
     color: rgb(12, 12, 12);
 }
 
@@ -474,7 +652,7 @@ footer, .footerContainer {
     font-size: 3rem;
     font-style: normal;
     font-weight: 600;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
 }
 
 .question p {
@@ -491,7 +669,7 @@ form {
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(12, 12, 12);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Roboto", serif;
 }
 
 /* TITULO DEL FORM */
@@ -585,4 +763,54 @@ form input[type="reset"]:hover, form input[type="submit"]:hover {
     color: #ebebeb;
     border: 1px solid #4897cc;
     background-color: #4897cc;
+}
+
+@media (max-width: 768px) {
+    .newalbums, .artists, .merch-photos {
+        flex-direction: column; /* Stack items */
+        gap: 10px;
+    }
+
+    .slider {
+        height: 300px; /* Reduce slider height */
+    }
+
+    .mainalbums {
+        grid-template-columns: repeat(2, 1fr); /* Reduce number of columns */
+    }
+
+    .logo {
+        right: 0; /* Center the logo */
+    }
+
+    .right-op {
+        left: 0; /* Adjust icon position */
+    }
+}
+
+@media (max-width: 768px) {
+    .newalbums, .artists, .merch-photos, .artists-love {
+        flex-direction: column; /* Stack items */
+        gap: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .newalbums {
+        gap: 15px; /* Slightly smaller gaps */
+    }
+
+    .mainalbums {
+        grid-template-columns: repeat(3, 1fr); /* Reduce columns */
+    }
+
+    .artists-love{
+        grid-template-columns: repeat(3, 1fr); /* Reduce columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .new-in, .main, .question {
+        font-size: 1.5rem; /* Adjust for smaller screens */
+    }
 }
