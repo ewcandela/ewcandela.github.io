@@ -771,7 +771,6 @@ footer {
     gap: 3rem;
     width: 100%;
     min-height: 100px;
-    height: 100px;
     padding: 10px;
     display: flex;
     align-items: flex-start;
@@ -780,65 +779,40 @@ footer {
     flex-wrap: wrap; 
 }
 
-
 .hanteo-chart {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    min-width: 200px;
     font-weight: bold;
+    min-width: 200px;
 }
 
 .hanteoimg img {
     width: 80px; 
-    height: 100px; 
+    height: auto; 
     cursor: pointer;
     max-width: 100%; 
-    height: auto;
 }
-
-.hanteo-chart {
-    width: 100px;
-    height: 50px;
-    font-weight: bold;
-}  
 
 .about-us, .support, .social {
     min-width: 150px;
     padding: 0 15px;
-}
-
-.about-us p {
-    display: flex;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
-.about-us li {
+.about-us p, .support p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-us li, .support li, .social li {
     gap: 5px;
     font-weight: bold;
     font-size: 15px;
-}
-
-.support p {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.support li {
-    gap: 5px;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.social li {
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 .social img {
@@ -847,40 +821,47 @@ footer {
     margin: 1px;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .footerContainer {
-        gap: 2rem;
-        padding: 15px;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
+        font-size: 14px;
+        gap: 2rem;
+    }
+
+    .hanteo-chart {
+        flex-direction: column;
+        min-width: 150px;
     }
 
     .about-us, .support, .social {
         width: 100%;
-        flex: 1;
-        text-align: center;
-        min-width: unset; 
-    }
-
-    .hanteo-chart {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .about-us li, .support li, .social li {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .footerContainer {
-        gap: 1.5rem;
-        padding: 10px;
+        min-width: unset;
+        padding: 0;
     }
 
     .hanteoimg img {
         width: 60px;
-        height: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerContainer {
+        font-size: 12px;
+        gap: 1rem;
+    }
+
+    .hanteoimg img {
+        width: 50px;
+    }
+
+    .about-us li, .support li, .social li {
+        font-size: 13px;
+    }
+
+    .social img {
+        width: 20px;
+        height: 20px;
     }
 }
 
