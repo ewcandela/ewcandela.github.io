@@ -18,14 +18,13 @@ header {
     z-index: 10;
 }
 
-/* LOGO de la izquierda */
-.logo {
-    position: relative;
+/* LOGO de la izquierda */  
+.left {
+    margin: auto;
     padding: 0.3rem;
-    right: 300px;
 }
 
-.logo img {
+.left img {
     height: 45px;
     width: 100px;
     object-fit: contain;
@@ -34,42 +33,87 @@ header {
 }
 
 /* NAVEGACIÓN del medio */
-nav, ul, li {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
+.middle {
+    margin: auto;
+    position: center;
 }
 
-a {
+nav ul {
+    gap: 2.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
     color: #ebebeb;
     font-size: 0.9rem;
-    font-style: normal;
     font-weight: 400;
     font-family: "Roboto", serif;
     text-decoration: none;
-    transition: 0.2s;
+    transition: color 0.2s;
 }
 
-a:hover {
+nav a:hover {
     color: #4897cc;
 }
 
 /* ICONOS de la derecha */
+.right {
+    margin: auto; 
+}
+
 .right-op {
-    position: relative;
-    align-self: center;
-    justify-content: center;
-    padding: 0.3rem;
-    left: 360px;
+    align-items: center;
     gap: 1.5rem;
+    padding: 0.3rem;
 }
 
 .right-op a img {
     width: 24px;
-    height: 24x;
+    height: 24px;
 }
+
+/* MENU de celular */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #ebebeb;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .middle, 
+    .mobile-menu-btn {
+        display: none;
+    }
+ 
+    header {
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+
+    .right .icon-cart span {
+        display: none;
+    }
+ }
+ 
+ @media (max-width: 480px) {
+    .left img {
+        width: 80px;
+    }
+    
+    .right-op {
+        gap: 0.8rem;
+    }
+ }
+
 
 /**/
 .overlay {
@@ -88,7 +132,7 @@ a:hover {
     display: flex;
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: 125px;
     width: 30px;
     color: #ebebeb;
 }
@@ -440,6 +484,28 @@ body.activeTabCart .cartTab {
     }
 }
 
+/**/
+.main-content nav, ul, li {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+a {
+    color: #ebebeb;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Roboto", serif;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #4897cc;
+}
 
 /* ARTISTAS QUE AMAMOS */
 .artists-love {
@@ -907,8 +973,8 @@ form {
     color: #ebebeb;
     margin-bottom: 20px;
     text-align: center;
+    align-items: center;
 }
-
 /**/
 
 form p4 {
@@ -989,5 +1055,4 @@ form input[type="reset"]:hover, form input[type="submit"]:hover {
     border: 1px solid #4897cc;
     background-color: #4897cc;
 }
-
 

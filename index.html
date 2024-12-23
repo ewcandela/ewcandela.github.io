@@ -22,29 +22,44 @@
             <nav class="elements-header">
                 <ul>
                     <!-- LOGO que vuelve a la homepage -->
-                    <a href="./index.html" class="logo"><img src="./assets/img/logos/versus.png" alt="logito"></a>
-                    
+                    <div class="left">
+                        <img src="./assets/img/logos/versus.png" alt="logito">
+                    </div>
+
                     <!-- Opciones del medio -->
-                    <li class="middle-op">
-                        <a href="shop">Shop</a> <!-- Plegar las distintas opciones -->
-                        <a href="exclusive">VERSUS-Exclusive</a>
-                        <a href="merch">Merchandise</a>
-                        <a href="sale">SALE</a>
-                        <a href="merch">VERSUS-Rewards</a>
-                        <a href=".//page/help.html">Help</a> <!-- Contacto, formulario para solicitudes, trabaja con nosotros, etc -->
-                    </li> 
+                     <div class="middle">
+                        <li class="middle-op">
+                            <a href="./index.html">Shop</a> <!-- Plegar las distintas opciones -->
+                            <a href="exclusive">VERSUS-Exclusive</a>
+                            <a href="merch">Merchandise</a>
+                            <a href="sale">SALE</a>
+                            <a href="merch">VERSUS-Rewards</a>
+                            <a href=".//page/help.html">Help</a> <!-- Contacto, formulario para solicitudes, trabaja con nosotros, etc -->
+                        </li> 
+                    </div>
 
                     <!-- Opciones de la derecha -->
-                    <li class="right-op">
-                        <a href="search"><img src="./assets/icons/search.png" alt="search"></a>
-                        <a href="wishlist"><img src="./assets/icons/favorite.png" alt="favorite"></a>
-                        <a href="account"><img src="./assets/icons/account.png" alt="account"></a>
-                        
-                        <div class="icon-cart">
-                            <a><img src="./assets/icons/cart.png" alt="shopping"></a>                                                                
-                            <span>0</span>
-                        </div>
-                    </li>
+                     <div class="right">
+                        <li class="right-op">
+                            <a href="search"><img src="./assets/icons/search.png" alt="search"></a>
+                            <a href="wishlist"><img src="./assets/icons/favorite.png" alt="favorite"></a>
+                            <a href="account"><img src="./assets/icons/account.png" alt="account"></a>
+                            
+                            <div class="icon-cart">
+                                <a><img src="./assets/icons/cart.png" alt="shopping"></a>                                                                
+                                <span>0</span>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+
+            <nav>
+                <button class="mobile-menu-btn">☰</button>
+                <ul class="mobile-menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href=".//page/help.html">Help</a></li>
                 </ul>
             </nav>
         </div>
@@ -118,41 +133,43 @@
     <!-- Sección Albumnes Nuevos -->
     <h1 class="new-in"> << NEW-IN >> </h1>
     
-    <ul>
-        <div class="newalbums">
-            <div class="album">
-                <a href="./page/vivizvoyageqr.html">
-                    <img src="./assets/img/new-albums/vivizvoyageqr.jpg">
-                </a>
-                    <h2>VIVIZ - VOYAGE (QR Ver.)</h2>
-                    <p class="price">$9.89</p>
-            </div>
-        
-            <div class="album">
-                <a href="./page/vivizvoyagepb.html">
-                    <img src="./assets/img/new-albums/voyagepb.png">
-                </a>
-                <h2>VIVIZ - VOYAGE (PB Ver.)</h2>
-                <p class="price">$15.89</p>
-            </div>
+    <div class="main-content">
+        <ul>
+            <div class="newalbums">
+                <div class="album">
+                    <a href="./page/vivizvoyageqr.html">
+                        <img src="/Proyecto/assets/img/new-albums/vivizvoyageqr.jpg">
+                    </a>
+                        <h2>VIVIZ - VOYAGE (QR Ver.)</h2>
+                        <p class="price">$9.89</p>
+                </div>
+            
+                <div class="album">
+                    <a href="./page/vivizvoyagepb.html">
+                        <img src="./assets/img/new-albums/voyagepb.png">
+                    </a>
+                    <h2>VIVIZ - VOYAGE (PB Ver.)</h2>
+                    <p class="price">$15.89</p>
+                </div>
 
-            <div class="album">
-                <a href="./page/tipitap.html">
-                    <img src="./assets/img/new-albums/tipitappb.jpg">
-                 </a>
-                <h2>KEP1ER - 6th Mini Album: TIPI-TAP</h2>
-                <p class="price">$12.98</p>
-            </div>
+                <div class="album">
+                    <a href="./page/tipitap.html">
+                        <img src="./assets/img/new-albums/tipitappb.jpg">
+                    </a>
+                    <h2>KEP1ER - 6th Mini Album: TIPI-TAP</h2>
+                    <p class="price">$12.98</p>
+                </div>
 
-            <div class="album">
-                <a href="./page/twicestrategy.html">
-                    <img src="./assets/img/new-albums/strategypb.jpg">
-                </a>
-                <h2>[PRE-ORDER] TWICE - STRATEGY (RANDOM Ver.)</h2>
-                <p class="price">$22.22</p>
+                <div class="album">
+                    <a href="./page/twicestrategy.html">
+                        <img src="./assets/img/new-albums/strategypb.jpg">
+                    </a>
+                    <h2>[PRE-ORDER] TWICE - STRATEGY (RANDOM Ver.)</h2>
+                    <p class="price">$22.22</p>
+                </div>
             </div>
-        </div>
-    </ul>
+        </ul>
+    </div>
 
     <!-- Sección Promocional de Artistas -->
     <div class="artists-love">
@@ -171,90 +188,94 @@
 
     <script src="./js/agregar-carrito.js"></script>
     <script src="./js/carrito.js"></script>
+    <script src="./js/telefono.js"></script>
 
-    <ul2>
-    <h4><< ALBUMES DESTACADOS >></h4>
-        <li class="mainalbums">
-                    
-            <!-- ALBUMS -->
-            <div class="m_album1">
-                <img src="./assets/img/albums/ateez_goldenhour.png">
-                <h5>ATEEZ - GOLDEN HOUR [LIVE Ver.]</h5>
-                <p class="price">$47.98</p>
-            </div>
+    <div class="main-content">
+        <h4><< ALBUMES DESTACADOS >></h4>
+        <ul>
+            <li class="mainalbums">
+                        
+                <!-- ALBUMS -->
+                <div class="m_album1">
+                    <img src="./assets/img/albums/ateez_goldenhour.png">
+                    <h5>ATEEZ - GOLDEN HOUR [LIVE Ver.]</h5>
+                    <p class="price">$47.98</p>
+                </div>
 
-            <div class="m_album2">
-                <img src="./assets/img/albums/kol_loseyourself.png">
-                <h5>KISS OF LIFE - LOSE YOURSELF [PB Ver.]</h5>
-                <p class="sold-out">SOLD OUT</p>
-            </div>
+                <div class="m_album2">
+                    <img src="./assets/img/albums/kol_loseyourself.png">
+                    <h5>KISS OF LIFE - LOSE YOURSELF [PB Ver.]</h5>
+                    <p class="sold-out">SOLD OUT</p>
+                </div>
 
-            <div class="m_album3">
-                <img src="./assets/img/albums/kol_loseyourselfJEWEL.png">
-                <h5>KISS OF LIFE - LOSE YOURSELF [JEWEL Ver.]</h5>
-                <p class="price">$15.99</p>
-            </div>
+                <div class="m_album3">
+                    <img src="./assets/img/albums/kol_loseyourselfJEWEL.png">
+                    <h5>KISS OF LIFE - LOSE YOURSELF [JEWEL Ver.]</h5>
+                    <p class="price">$15.99</p>
+                </div>
 
-            <div class="m_album4">
-                <img src="./assets/img/albums/p1_sadsong.png">
-                <h5>P1HARMONY - SAD SONG [RANDOM Ver.]</h5>
-                <p class="price">$29.99</p>
-            </div>
+                <div class="m_album4">
+                    <img src="./assets/img/albums/p1_sadsong.png">
+                    <h5>P1HARMONY - SAD SONG [RANDOM Ver.]</h5>
+                    <p class="price">$29.99</p>
+                </div>
 
-            <div class="m_album5">
-                <img src="./assets/img/albums/lessera_crazy.png">
-                <h5>LE SSERAFIM - CRAZY [PB Ver.]</h5>
-                <p class="price">$25.50</p>
-            </div>
+                <div class="m_album5">
+                    <img src="./assets/img/albums/lessera_crazy.png">
+                    <h5>LE SSERAFIM - CRAZY [PB Ver.]</h5>
+                    <p class="price">$25.50</p>
+                </div>
 
-            <div class="m_album5">
-                <img src="./assets/img/albums/lessera_crazycompact.png">
-                <h5>LE SSERAFIM - CRAZY [COMPACT Ver.]</h5>
-                <p class="price">$14.66</p>
-            </div>
+                <div class="m_album5">
+                    <img src="./assets/img/albums/lessera_crazycompact.png">
+                    <h5>LE SSERAFIM - CRAZY [COMPACT Ver.]</h5>
+                    <p class="price">$14.66</p>
+                </div>
 
-            <div class="m_album5">
-                <img src="./assets/img/albums/lsb_ttyl.png">
-                <h5>LOOSSEMBLE - TTYL [RANDOM Ver.]</h5>
-                <p class="price">$16.99</p>
-            </div>
+                <div class="m_album5">
+                    <img src="./assets/img/albums/lsb_ttyl.png">
+                    <h5>LOOSSEMBLE - TTYL [RANDOM Ver.]</h5>
+                    <p class="price">$16.99</p>
+                </div>
 
-            <div class="m_album5">
-                <img src="./assets/img/albums/oneus_ldvSIGNED.png">
-                <h5>[SIGNED] ONEUS - LA DOLCE VITA [RANDOM VER.]</h5>
-                <p class="sold-out">SOLD OUT</p>
-            </div>
+                <div class="m_album5">
+                    <img src="./assets/img/albums/oneus_ldvSIGNED.png">
+                    <h5>[SIGNED] ONEUS - LA DOLCE VITA [RANDOM VER.]</h5>
+                    <p class="sold-out">SOLD OUT</p>
+                </div>
 
-            <div class="m_album5">
-                <img src="./assets/img/albums/aespa_whip.png">
-                <h5>AESPA - WHIPLASH [PB VER.]</h5>
-                <p class="price">$29.99</p>
-            </div>
+                <div class="m_album5">
+                    <img src="./assets/img/albums/aespa_whip.png">
+                    <h5>AESPA - WHIPLASH [PB VER.]</h5>
+                    <p class="price">$29.99</p>
+                </div>
 
-            <div class="m_album5">
-                <img src="./assets/img/albums/17_spilltf.jpg">
-                <h5>SEVENTEEN - SPILL THE FEELS [RANDOM Ver.]</h5>
-                <p class="price">$14.97</p>
-            </div>
+                <div class="m_album5">
+                    <img src="./assets/img/albums/17_spilltf.jpg">
+                    <h5>SEVENTEEN - SPILL THE FEELS [RANDOM Ver.]</h5>
+                    <p class="price">$14.97</p>
+                </div>
 
-            <div class="m_album5">
-                <img src="./assets/img/albums/p1_sadsongDIGI.png">
-                <h5>P1HARMONY - SAD SONG [DIGIPACK]</h5>
-                <p class="price">$11.50</p>
-            </div>
+                <div class="m_album5">
+                    <img src="./assets/img/albums/p1_sadsongDIGI.png">
+                    <h5>P1HARMONY - SAD SONG [DIGIPACK]</h5>
+                    <p class="price">$11.50</p>
+                </div>
 
-            <div class="m_album5">
-                <img src="./assets/img/albums/hwasa_na.png">
-                <h5>HWASA - O </h5>
-                <p class="price">$29.99</p>
-            </div>
-        </li>
+                <div class="m_album5">
+                    <img src="./assets/img/albums/hwasa_na.png">
+                    <h5>HWASA - O </h5>
+                    <p class="price">$29.99</p>
+                </div>
+            </li>
+        </ul>
 
         <!-- BOTON VER MÁS -->
         <div class="button-container">
             <button>VER TODO</button>
         </div>
-    </ul2>
+
+    </div>
 
     <section class="merch">
         <h6> << MERCHANDISE >> </h6>
