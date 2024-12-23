@@ -379,13 +379,14 @@ body.activeTabCart .cartTab {
 /* ALBUMNES AGREGADOS RECIENTEMENTE */
 .newalbums {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .album img {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     border: none;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -412,17 +413,44 @@ body.activeTabCart .cartTab {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+@media screen and (max-width: 1200px) {
+    .newalbums {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .newalbums {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .newalbums {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .album h2 {
+        font-size: 14px;
+    }
+    
+    .album p {
+        font-size: 12px;
+    }
+}
+
 
 /* ARTISTAS QUE AMAMOS */
 .artists-love {
     color: #ebebeb;
     margin-top: 5rem;
+    padding: 10px 10px;
     width: 100%;
-    height: 200px;
     background-color: rgb(12, 12, 12);
 }
 
-.artists-love, h3 {
+.artists-love h3 {
     padding-top: 5px;
     font-size: 30px;
     font-style: normal;
@@ -433,8 +461,9 @@ body.activeTabCart .cartTab {
 
 .artists {
     display: flex;
+    flex-wrap: wrap;    
     width: 100%;
-    height: 280px;
+    padding: 20px 20px;
     gap: 30px;
     align-items: center;
     justify-content: center;
@@ -451,14 +480,55 @@ body.activeTabCart .cartTab {
 }
 
 .artists img:hover {
-    transition: ease;
+    transition: all 0.3s ease;
     border: 5px solid #4897cc;
+}
+
+@media screen and (max-width: 1200px) {
+    .artists img {
+        width: 200px;
+        height: 200px;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .artists-love h3 {
+        font-size: 26px;
+    }
+    
+    .artists img {
+        width: 180px;
+        height: 180px;
+        border-radius: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .artists-love {
+        margin-top: 3rem;
+    }
+    
+    .artists-love h3 {
+        font-size: 22px;
+    }
+    
+    .artists {
+        gap: 20px;
+        padding: 30px 15px;
+    }
+    
+    .artists img {
+        width: 150px;
+        height: 150px;
+        border-radius: 30px;
+    }
 }
 
 /* MAIN */
 .main, h4 {
     color: #4897cc;
-    padding-top: 15rem;
+    padding-top: 8rem;
     padding-bottom: 3rem;
     text-align: center;
     font-size: 3rem;
@@ -472,12 +542,14 @@ body.activeTabCart .cartTab {
     display: grid;
     grid-template-columns: repeat(4, auto);
     row-gap: 15px;
+    padding: 0 20px;
 }
 
 
 div[class^='m_album'] img {
     width: 400px;
-    height: 400px;
+    max-width: 400px;
+    height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -487,7 +559,7 @@ div[class^='m_album'] img:hover {
     transform: scale(0.9);
 }
 
-.main, .m_album, h5 {
+.mainalbums h5 {
     text-align: center;
     font-size: 15px;
     font-style: bold;
@@ -495,7 +567,7 @@ div[class^='m_album'] img:hover {
     font-family: "Roboto", serif;
 }
 
-.m_album, p {
+.m_album p {
     text-align: center;
     font-size: 13px;
     font-style: normal;
@@ -534,20 +606,78 @@ button:hover {
     border: 1px solid #4897cc;
     color: #ebebeb;
     background-color: #4897cc;
-    transition: ease-in-out;
+    transition: all 0.3s ease;
 }
+
+@media screen and (max-width: 1200px) {
+    .mainalbums {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .main h4 {
+        font-size: 2.5rem;
+        padding-top: 7rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .mainalbums {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .main h4 {
+        font-size: 2rem;
+        padding-top: 6rem;
+    }
+    
+    button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mainalbums {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .main h4 {
+        font-size: 1.75rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    
+    div[class^='m_album'] img {
+        max-width: 100%;
+    }
+    
+    .main .m_album h5 {
+        font-size: 14px;
+    }
+    
+    .m_album p {
+        font-size: 12px;
+    }
+    
+    button {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
+
 
 /* MERCH */
 .merch {
     color: #ebebeb;
     margin-top: 5rem;
-    margin-bottom: 8rem;
+    margin-bottom: 1rem;
     width: 100%;
-    height: 200px;
+    height: auto;
+    padding-top: 20px 0;
     background-color: rgb(12, 12, 12);
 }
 
-.merch, h6 {
+.merch h6 {
     padding-top: 5px;
     font-size: 30px;
     font-style: normal;
@@ -558,8 +688,9 @@ button:hover {
 
 .merch-photos {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 280px;
+    padding: 20px 20px;
     gap: 30px;
     align-items: center;
     justify-content: center;
@@ -571,8 +702,7 @@ button:hover {
     height: 230px;
     border-radius: 50px;
     object-fit: cover;
-    align-items: center;
-    justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .merch-photos img:hover {
@@ -580,47 +710,123 @@ button:hover {
     border: 5px solid #4897cc;
 }
 
+@media screen and (max-width: 1200px) {
+    .merch-photos img {
+        width: 200px;
+        height: 200px;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .merch {
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+    }
+    
+    .merch h6 {
+        font-size: 26px;
+    }
+    
+    .merch-photos img {
+        width: 180px;
+        height: 180px;
+        border-radius: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .merch {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+    
+    .merch h6 {
+        font-size: 22px;
+    }
+    
+    .merch-photos {
+        gap: 20px;
+        padding: 30px 15px;
+    }
+    
+    .merch-photos img {
+        width: 150px;
+        height: 150px;
+        border-radius: 30px;
+    }
+}
+
+
 /* FOOTER */
-footer, .footerContainer { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7rem;
+footer {
     width: 100%;
-    height: 100px;
-    padding: 10px;
-    font-size: 12px;
-    font-family: "Roboto", serif;  
+    padding: 10px 0;
+    justify-content: center;
+    font-family: "Roboto", serif;
     color: rgb(12, 12, 12);
 }
 
-.footerContainer {
-    position: absolute;
-    left: 0;
+.footerContainer { 
+    gap: 3rem;
+    width: 100%;
+    min-height: 100px;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 12px;
+    flex-wrap: wrap; 
 }
 
-.hanteo-chart, .p3{
+
+.hanteo-chart {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    min-width: 200px;
+    font-weight: bold;
 }
 
 .hanteoimg img {
     width: 80px; 
     height: 100px; 
     cursor: pointer;
+    max-width: 100%; 
+    height: auto;
 }
 
-.hanteo-chart p3 {
+.hanteo-chart {
     width: 100px;
     height: 50px;
     font-weight: bold;
 }  
 
+.about-us, .support, .social {
+    min-width: 150px;
+    padding: 0 15px;
+}
+
+.about-us p {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .about-us li {
     gap: 5px;
     font-weight: bold;
     font-size: 15px;
+}
+
+.support p {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .support li {
@@ -637,10 +843,46 @@ footer, .footerContainer {
 
 .social img {
     width: 24px;
-    height: 24x;
+    height: 24px;
+    margin: 1px;
 }
 
+@media screen and (max-width: 768px) {
+    .footerContainer {
+        gap: 2rem;
+        padding: 15px;
+        flex-direction: column; 
+        align-items: center;
+    }
 
+    .about-us, .support, .social {
+        width: 100%;
+        flex: 1;
+        text-align: center;
+        min-width: unset; 
+    }
+
+    .hanteo-chart {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-us li, .support li, .social li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footerContainer {
+        gap: 1.5rem;
+        padding: 10px;
+    }
+
+    .hanteoimg img {
+        width: 60px;
+        height: 75px;
+    }
+}
 
 
 /**/
@@ -765,52 +1007,4 @@ form input[type="reset"]:hover, form input[type="submit"]:hover {
     background-color: #4897cc;
 }
 
-@media (max-width: 768px) {
-    .newalbums, .artists, .merch-photos {
-        flex-direction: column; /* Stack items */
-        gap: 10px;
-    }
 
-    .slider {
-        height: 300px; /* Reduce slider height */
-    }
-
-    .mainalbums {
-        grid-template-columns: repeat(2, 1fr); /* Reduce number of columns */
-    }
-
-    .logo {
-        right: 0; /* Center the logo */
-    }
-
-    .right-op {
-        left: 0; /* Adjust icon position */
-    }
-}
-
-@media (max-width: 768px) {
-    .newalbums, .artists, .merch-photos, .artists-love {
-        flex-direction: column; /* Stack items */
-        gap: 10px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .newalbums {
-        gap: 15px; /* Slightly smaller gaps */
-    }
-
-    .mainalbums {
-        grid-template-columns: repeat(3, 1fr); /* Reduce columns */
-    }
-
-    .artists-love{
-        grid-template-columns: repeat(3, 1fr); /* Reduce columns */
-    }
-}
-
-@media (max-width: 768px) {
-    .new-in, .main, .question {
-        font-size: 1.5rem; /* Adjust for smaller screens */
-    }
-}
