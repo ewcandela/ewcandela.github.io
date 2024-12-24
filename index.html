@@ -91,7 +91,12 @@
     <section class="slider-container">
         <div class="slider-main">
             <div class="slider">
-                <img id="slider-1" src="./assets/img/sliders/slider-1.jpg">
+                <img id="slider-1" 
+                src="./assets/img/sliders/slider-1.jpg"
+                srcset= "./assets/img/sliders/slider-1.jpg 480w, ./assets/img/sliders/slider-1.jpg 768w, ./assets/img/sliders/slider-1.jpg 1024w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                loading="lazy"
+                width="1024">
                 <img id="slider-2" src="./assets/img/sliders/slider-2.png">
                 <img id="slider-3" src="./assets/img/sliders/slider-3.jpg">
                 <img id="slider-4" src="./assets/img/sliders/slider-4.png">
@@ -138,7 +143,7 @@
             <div class="newalbums">
                 <div class="album">
                     <a href="./page/vivizvoyageqr.html">
-                        <img src="./assets/img/new-albums/vivizvoyageqr.jpg">
+                        <img src="/Proyecto/assets/img/new-albums/vivizvoyageqr.jpg">
                     </a>
                         <h2>VIVIZ - VOYAGE (QR Ver.)</h2>
                         <p class="price">$9.89</p>
@@ -188,7 +193,7 @@
 
     <script src="./js/agregar-carrito.js"></script>
     <script src="./js/carrito.js"></script>
-    <script src="./js/telefono.js"></script>
+    <script src="./js/mobile.js"></script>
 
     <div class="main-content">
         <h4><< ALBUMES DESTACADOS >></h4>

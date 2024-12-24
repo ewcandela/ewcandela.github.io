@@ -23,13 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
             <img src="${item.image}" class="cart-item-img">
+            <div class="cart-item-wrap">
                 <div class="cart-item-details">
                     <h5>${item.title}</h5>
-                    <p>$${item.price.toFixed(2)} x ${item.quantity}</p>
-                    <div class="remove-button">
-                        <button class="remove-item" data-id="${item.id}">Eliminar</button>
+                    <div class="cart-price">
+                        <p>$${item.price.toFixed(2)} x ${item.quantity}</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="remove-button">
+                <button class="remove-item" data-id="${item.id}">X</button>
+            </div>
             `;
             listCart.appendChild(cartItem);
         });
