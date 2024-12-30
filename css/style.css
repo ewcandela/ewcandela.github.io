@@ -410,7 +410,7 @@ body.activeTabCart .cartTab {
     justify-content: center;
     width: 100%;
     min-height: 70px;
-    padding: 20px;
+    padding: 1px;
     gap: 2rem;
     background-color: rgb(12, 12, 12);
 }
@@ -449,27 +449,45 @@ body.activeTabCart .cartTab {
     padding: 20px;
 }
 
+
 @media (max-width: 768px) {
     .info {
-        gap: 1px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
         padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .info {
-        flex-direction: column;
-        gap: 1px;
-        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 8px;
     }
 
     .freeshipping h1,
     .hanteo h1,
     .rewards h1 {
-        font-size: 20px;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        font-family: "Roboto", serif;
+    }
+
+    .rewards h1  {
+        padding-bottom: 10px;
+    }
+
+    .freeshipping p,
+    .hanteo p,
+    .rewards p {
+        font-size: 10px;
         font-style: normal;
         font-weight: 400;
         font-family: "Roboto", serif;
+        padding-top: 10px;
     }
 
     .freeshipping,
@@ -483,7 +501,7 @@ body.activeTabCart .cartTab {
 /* NEW IN */
 .new-in {
     color: #4897cc;
-    padding-top: 6rem;
+    padding-top: 5rem;
     padding-bottom: 3rem;
     text-align: center;
     font-size: 3rem;
@@ -495,8 +513,8 @@ body.activeTabCart .cartTab {
 /* ALBUMNES AGREGADOS RECIENTEMENTE */
 .newalbums {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px;
 }
 
 .album img {
@@ -579,42 +597,61 @@ a:hover {
     color: #4897cc;
 }
 
+
 /* ARTISTAS QUE AMAMOS */
 .artists-love {
     color: #ebebeb;
-    margin-top: 5rem;
-    padding: 10px 10px;
+    margin-top: 3rem;
     width: 100%;
     background-color: rgb(12, 12, 12);
 }
 
 .artists-love h3 {
     padding-top: 5px;
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px);
     font-style: normal;
     font-weight: 400;
     font-family: "Roboto", serif;
     text-align: center;
 }
 
+.mini-slider-container {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    width: 100%;
+    position: relative;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mini-slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.mini-slider-container:active {
+    cursor: grabbing;
+}
+
 .artists {
     display: flex;
-    flex-wrap: wrap;    
-    width: 100%;
-    padding: 20px 20px;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
+    padding: 10px;
     background-color: rgb(12, 12, 12);
+    transition: transform 0.2s ease-out;
+    user-select: none;
+}
+
+.artists a {
+    flex: 0 0 auto;
+    padding: 10px;
 }
 
 .artists img {
     width: 230px;
     height: 230px;
     border-radius: 50px;
+    box-sizing: border-box;
     object-fit: cover;
-    align-items: center;
-    justify-content: center;
 }
 
 .artists img:hover {
@@ -622,51 +659,37 @@ a:hover {
     border: 5px solid #4897cc;
 }
 
-@media screen and (max-width: 1200px) {
-    .artists img {
-        width: 200px;
-        height: 200px;
-        border-radius: 40px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .artists-love h3 {
-        font-size: 26px;
-    }
-    
-    .artists img {
-        width: 180px;
-        height: 180px;
-        border-radius: 35px;
-    }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .artists-love {
-        margin-top: 3rem;
-    }
-    
-    .artists-love h3 {
-        font-size: 22px;
+        margin-top: 2rem;
     }
     
     .artists {
-        gap: 20px;
-        padding: 30px 15px;
+        gap: 5px;
+        padding: 5px;
     }
     
+    .artists a {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .artists img {
-        width: 150px;
-        height: 150px;
-        border-radius: 30px;
+        width: 120px;
+        height: 120px;
+        border-radius: 25px;
+    }
+    
+    .artists img:hover {
+        border-width: 3px;
     }
 }
 
 /* MAIN */
 .main, h4 {
     color: #4897cc;
-    padding-top: 8rem;
+    padding-top: 5rem;
     padding-bottom: 3rem;
     text-align: center;
     font-size: 3rem;
@@ -749,7 +772,7 @@ button:hover {
 
 @media screen and (max-width: 1200px) {
     .mainalbums {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .main h4 {
@@ -775,7 +798,7 @@ button:hover {
 
 @media screen and (max-width: 600px) {
     .mainalbums {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
     
@@ -807,40 +830,57 @@ button:hover {
 /* MERCH */
 .merch {
     color: #ebebeb;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
     width: 100%;
-    height: auto;
-    padding-top: 20px 0;
     background-color: rgb(12, 12, 12);
 }
 
 .merch h6 {
     padding-top: 5px;
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px);
     font-style: normal;
     font-weight: 400;
     font-family: "Roboto", serif;
     text-align: center;
 }
 
+.mini-slider {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    width: 100%;
+    position: relative;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mini-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.mini-slider:active {
+    cursor: grabbing;
+}
+
 .merch-photos {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px 20px;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
+    padding: 10px;
     background-color: rgb(12, 12, 12);
+    transition: transform 0.2s ease-out;
+    user-select: none;
+}
+
+.merch-photos a {
+    flex: 0 0 auto;
+    padding: 10px;
 }
 
 .merch-photos img {
     width: 230px;
     height: 230px;
     border-radius: 50px;
+    box-sizing: border-box;
     object-fit: cover;
-    transition: all 0.3s ease;
 }
 
 .merch-photos img:hover {
@@ -856,42 +896,29 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
     .merch {
-        margin-top: 4rem;
-        margin-bottom: 6rem;
+        margin-top: 2rem;
     }
-    
+
     .merch h6 {
-        font-size: 26px;
-    }
-    
-    .merch-photos img {
-        width: 180px;
-        height: 180px;
-        border-radius: 35px;
+        padding: 5px;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .merch {
-        margin-top: 3rem;
-        margin-bottom: 4rem;
-    }
-    
-    .merch h6 {
-        font-size: 22px;
-    }
-    
+@media screen and (max-width: 480px) {
     .merch-photos {
-        gap: 20px;
-        padding: 30px 15px;
+        gap: 1px;
     }
-    
+
     .merch-photos img {
-        width: 150px;
-        height: 150px;
-        border-radius: 30px;
+        width: 120px;
+        height: 120px;
+        border-radius: 25px;
+    }
+
+    .artists img:hover {
+        border-width: 3px;
     }
 }
 
@@ -906,7 +933,7 @@ footer {
 }
 
 .footerContainer { 
-    gap: 3rem;
+    gap: 2rem;
     width: 100%;
     min-height: 100px;
     padding: 10px;
@@ -924,6 +951,7 @@ footer {
     gap: 10px;
     font-weight: bold;
     min-width: 200px;
+    padding: 10px;
 }
 
 .hanteoimg img {
@@ -961,14 +989,13 @@ footer {
 
 @media (max-width: 768px) {
     .footerContainer {
-        flex-direction: column;
         align-items: center;
         font-size: 14px;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .hanteo-chart {
-        flex-direction: column;
+        display: flex;
         min-width: 150px;
     }
 
@@ -1127,4 +1154,5 @@ form input[type="reset"]:hover, form input[type="submit"]:hover {
     border: 1px solid #4897cc;
     background-color: #4897cc;
 }
+
 

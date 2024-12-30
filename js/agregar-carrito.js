@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             listCart.appendChild(cartItem);
         });
 
-        totalElement.textContent = `$${subtotal.toFixed(2)}`;
+        totalElement.textContent = `${subtotal.toFixed(2)}`;
 
         // Sacar del carrito
         document.querySelectorAll('.remove-item').forEach(button => {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: button.getAttribute('data-id'),
             title: button.getAttribute('data-title'),
             price: parseFloat(button.getAttribute('data-price')),
-            quantity: parseInt(button.previousElementSibling.value), // Get quantity input
+            quantity: parseInt(button.previousElementSibling.value),
             image: button.getAttribute('data-image'),
         };
 
