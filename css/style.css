@@ -1035,9 +1035,9 @@ footer {
 /* PÁGINA HELP */
 .question {
     color: #4897cc;
-    margin: 3rem;
+    margin: 1.5rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 600;
     font-family: "Roboto", serif;
@@ -1045,15 +1045,16 @@ footer {
 
 .question p {
     color: rgb(12, 12, 12);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
 }
 
 /* FORM */
 form {
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     margin: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(12, 12, 12);
@@ -1112,6 +1113,7 @@ form .concern {
 
 form textarea {
     resize: vertical;
+    min-height: 100px;
 }
 
 form input[type="file"] {
@@ -1155,4 +1157,41 @@ form input[type="reset"]:hover, form input[type="submit"]:hover {
     background-color: #4897cc;
 }
 
+@media screen and (min-width: 768px) {
+    .question {
+        font-size: 2.5rem;
+        margin: 2rem;
+    }
 
+    form {
+        padding: 20px;
+    }
+
+    .request h9 {
+        font-size: 20px;
+    }
+
+    form label {
+        font-size: 16px;
+    }
+
+    form input[type="reset"],
+    form input[type="submit"] {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .question {
+        font-size: 3rem;
+        margin: 3rem;
+    }
+
+    .question p {
+        font-size: 13px;
+    }
+
+    form {
+        width: 600px;
+    }
+}

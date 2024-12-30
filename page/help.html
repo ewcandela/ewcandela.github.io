@@ -21,7 +21,7 @@
                 <ul>
                     <!-- LOGO que vuelve a la homepage -->
                     <div class="left">
-                        <img src="../assets/img/logos/versus.png" alt="logito">
+                        <a href="../index.html"><img src="../assets/img/logos/versus.png" alt="logito"></a>
                     </div>
 
                     <!-- Opciones del medio -->
@@ -64,13 +64,13 @@
     </header>
 
     <div class="question">
-        <h8> << ¿NECESITAS AYUDA? >></h8>
+        <h8> < ¿NECESITAS AYUDA? ></h8>
         <p> CONTACTA CON NUESTRO SOPORTE </p>
     </div>
 
     <form action="https://formspree.io/f/myzyjaeg" method="POST">
         <div class="request">
-            <h9> << ENVIA UN TICKET >></h9>
+            <h9> < ENVIA UN TICKET ></h9>
             <p>Por favor, no envies más de un ticket</p>
         </div>
 
@@ -137,10 +137,12 @@
         </p5>
 
         <p4>
-            <input type="submit" value="Submit">
+            <input type="submit" onclick="validateForm()" value="Submit">
             <input type="reset" value="Clear">
         </p4>
     </form>
+
+    <script src="../js/verificacion.js"></script>
 </main>
 
 <footer>
