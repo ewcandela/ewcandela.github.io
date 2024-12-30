@@ -147,19 +147,23 @@ body {
 @media (max-width: 768px) {
     .product-container {
         grid-template-columns: repeat(1, 1fr);
-        padding: 15px;
+        padding: 0px;
     }
 
     .product-img img {
         width: 100%;
+        padding-bottom: 10px;
+        border: none;
+        border-radius: 0;
     }
 
     .product-details {
         float: left;
+        margin-right: 25px;
     }
 
     .purchase {
-        align-items: center;
+        margin-right: 25px;
     }
 
 }
